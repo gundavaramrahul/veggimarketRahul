@@ -71,15 +71,15 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 
 
-//            Image(
-//                painter = painterResource(id = R.drawable.vege1),
-//                contentDescription = "",
-//                modifier = Modifier
-//                    .align(alignment = Alignment.TopStart)
-//                    .offset(x = 20.dp,
-//                        y = 88.dp)
-//                    .requiredWidth(width = 375.dp)
-//                    .requiredHeight(height = 463.dp))
+            Image(
+                painter = painterResource(id = R.drawable.vege1),
+                contentDescription = "",
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 20.dp,
+                        y = 88.dp)
+                    .requiredWidth(width = 375.dp)
+                    .requiredHeight(height = 463.dp))
 
 
 
