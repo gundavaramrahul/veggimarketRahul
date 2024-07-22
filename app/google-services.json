@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "242924243591",
+    "project_id": "veggiemarket-1c6fc",
+    "storage_bucket": "veggiemarket-1c6fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242924243591:android:852bd928ce186db26dc622",
+        "android_client_info": {
+          "package_name": "ccom.app.veggiemarket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt6rdinPKoWQdy_PO-qSmbuPQ8wlTAJ-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

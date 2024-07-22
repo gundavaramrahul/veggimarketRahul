@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Veggiemarket</string>
+
+    <string name="hello">, </string>
+    <string name="terms_and_conditions_headerdes">Veggie market App Term of Use
+    Terms of Use: By accessing [Vegetable Delivery App], you agree to abide by our Terms of Use, including account responsibilities, ordering, payment terms, delivery conditions, and prohibited conduct. We disclaim warranties and limit liability. Changes to terms may occur without notice.
+
+Privacy Policy: We collect and use personal information to deliver services effectively, ensuring data security and confidentiality. Third-party services may be engaged, and cookies may be used for tracking. We do not knowingly collect data from children under 13. Users are notified of any policy changes. Contact us for inquiries.</string>
+    <string name="create_account">Create an Account </string>
+    <string name="welcome">Welcome Back</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_password">Show password</string>
+    <string name="terms_and_conditions">Privacy Policy and Term of Use</string>
+    <string name="terms_and_conditions_header"></string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="or">or</string>
+    <string name="go_to_login">Already have an account? Login</string>
+
+    <string name="forgot_password">Forgot your password</string>
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="menu">Menu</string>
+    <string name="navigation_header">App Drawer</string>
+    <string name="title_activity_details_page">DetailsPageActivity</string>
+    <string name="title_activity_addto_cart">AddtoCartActivity</string>
+
+</resources>
