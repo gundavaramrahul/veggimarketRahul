@@ -102,7 +102,66 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     .align(alignment = Alignment.TopStart)
                     .offset(x = 27.dp,
                         y = 567.dp))
-            //here
+            Text(
+                text = "The potato is a starchy root vegetable native to the Americas that is consumed as a staple food in many parts of the world.",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Medium),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 27.dp,
+                        y = 601.dp))
+
+
+            Box(
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 27.dp,
+                        y = 748.dp)
+                    .requiredSize(size = 30.dp)
+                    .clip(shape = CircleShape)
+                    .background(color = Color(0x774CAF50)))
+            Box(
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 107.dp,
+                        y = 748.dp)
+                    .requiredSize(size = 30.dp)
+                    .clip(shape = CircleShape)
+                    .background(color = Color(0x75FF5722)))
+
+            Text(
+                text = "+",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Medium),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 38.dp,
+                        y = 754.dp))
+            Text(
+                text = "1",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Medium),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 80.dp,
+                        y = 751.dp))
+
+            Text(
+                text = "-",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Medium),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 119.dp,
+                        y = 754.dp))
 
 
             val localContext = LocalContext.current
