@@ -1,3 +1,4 @@
+
 package com.app.veggiemarket
 
 import android.content.Intent
@@ -30,13 +31,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.app.veggiemarket.ui.theme.VeggiemarketTheme
+import com.app.veggiemarket.ui.theme.VegetableAppTheme
 
 class DetailsPageActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            VeggiemarketTheme {
+            VegetableAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -81,8 +82,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     .requiredWidth(width = 375.dp)
                     .requiredHeight(height = 463.dp))
 
-
-
             Text(
                 text = "£ 40.00",
                 color = Color.Black,
@@ -102,7 +101,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     .align(alignment = Alignment.TopStart)
                     .offset(x = 27.dp,
                         y = 567.dp))
-<<<<<<< HEAD
+
             Text(
                 text = "The potato is a starchy root vegetable native to the Americas that is consumed as a staple food in many parts of the world.",
                 color = Color.Black,
@@ -163,71 +162,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     .align(alignment = Alignment.TopStart)
                     .offset(x = 119.dp,
                         y = 754.dp))
-=======
-
-            Text(
-                            text = "The potato is a starchy root vegetable native to the Americas that is consumed as a staple food in many parts of the world.",
-                            color = Color.Black,
-                            style = TextStyle(
-                                fontSize = 14.sp,
-                                fontWeight = FontWeight.Medium),
-                            modifier = Modifier
-                                .align(alignment = Alignment.TopStart)
-                                .offset(x = 27.dp,
-                                    y = 601.dp))
-
-
-                        Box(
-                            modifier = Modifier
-                                .align(alignment = Alignment.TopStart)
-                                .offset(x = 27.dp,
-                                    y = 748.dp)
-                                .requiredSize(size = 30.dp)
-                                .clip(shape = CircleShape)
-                                .background(color = Color(0x774CAF50)))
-                        Box(
-                            modifier = Modifier
-                                .align(alignment = Alignment.TopStart)
-                                .offset(x = 107.dp,
-                                    y = 748.dp)
-                                .requiredSize(size = 30.dp)
-                                .clip(shape = CircleShape)
-                                .background(color = Color(0x75FF5722)))
-
-                        Text(
-                            text = "+",
-                            color = Color.Black,
-                            style = TextStyle(
-                                fontSize = 14.sp,
-                                fontWeight = FontWeight.Medium),
-                            modifier = Modifier
-                                .align(alignment = Alignment.TopStart)
-                                .offset(x = 38.dp,
-                                    y = 754.dp))
-                        Text(
-                            text = "1",
-                            color = Color.Black,
-                            style = TextStyle(
-                                fontSize = 20.sp,
-                                fontWeight = FontWeight.Medium),
-                            modifier = Modifier
-                                .align(alignment = Alignment.TopStart)
-                                .offset(x = 80.dp,
-                                    y = 751.dp))
-
-                        Text(
-                            text = "-",
-                            color = Color.Black,
-                            style = TextStyle(
-                                fontSize = 14.sp,
-                                fontWeight = FontWeight.Medium),
-                            modifier = Modifier
-                                .align(alignment = Alignment.TopStart)
-                                .offset(x = 119.dp,
-                                    y = 754.dp))
->>>>>>> 528d190afbf2c78c65d52d760db1586226cc9f0b
-
-
             val localContext = LocalContext.current
             Box(
                 modifier = Modifier
@@ -271,7 +205,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    VeggiemarketTheme {
+    VegetableAppTheme {
         Greeting("Android")
     }
 }
