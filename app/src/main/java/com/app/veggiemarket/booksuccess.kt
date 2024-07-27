@@ -33,7 +33,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.app.veggiemarket.compoofveg.HeadingTextComponent
+import com.app.veggiemarket.components.HeadingTextComponent
 import com.app.veggiemarket.ui.theme.Primary
 
 
@@ -77,16 +77,14 @@ class booksuccess : ComponentActivity() {
                                 .wrapContentWidth()
                                 .heightIn(48.dp),
                             onClick = {
-                                context.startActivity(Intent(context, VegMain::class.java)
+                                context.startActivity(Intent(context, MainActivity::class.java)
                                     .putExtra("veg", veg))
                             },
                             contentPadding = PaddingValues(),
                             colors = ButtonDefaults.buttonColors(Color.Transparent),
                             shape = RoundedCornerShape(50.dp),
-                        )
-                        {
-//
-
+                        ) {
+                           //order4
                         }
                     }
                 }

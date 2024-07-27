@@ -38,6 +38,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.OutlinedButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -48,8 +52,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.app.veggiemarket.ui.theme.VeggiemarketTheme
+import com.app.veggiemarket.components.HeadingTextComponent
+import com.app.veggiemarket.ui.theme.VegetableAppTheme
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -140,7 +146,7 @@ class UserProfileActivity : ComponentActivity() {
             val cameraPermissionStatus by remember { cameraPermissionStatusState }
             val hasPhoto by remember { hasPhotoState }
             var shouldShowFullImage by remember { mutableStateOf(false) }
-            VeggiemarketTheme() {
+            VegetableAppTheme() {
                 Box(modifier = Modifier.fillMaxSize()) {
                     Column(
                         modifier = Modifier.fillMaxSize(),
@@ -191,24 +197,7 @@ class UserProfileActivity : ComponentActivity() {
                             }
 
 
-                            Spacer(modifier = Modifier.height(8.dp))
-
-                            TextField(
-                                value = email,
-                                onValueChange = { email = it },
-                                label = { Text("Email") },
-                                modifier = Modifier.fillMaxWidth()
-                            )
-
-                            Spacer(modifier = Modifier.height(8.dp))
-
-                            TextField(
-                                value = password,
-                                onValueChange = { password = it },
-                                label = { Text("Password") },
-                                modifier = Modifier.fillMaxWidth(),
-                                visualTransformation = PasswordVisualTransformation()
-                            )
+                           //profile3
 
                             Spacer(modifier = Modifier.height(16.dp))
 
@@ -228,7 +217,7 @@ class UserProfileActivity : ComponentActivity() {
                                     .background(color = Color(0xFF4CAF50))
                                     .clickable {
                                         localContext.startActivity(
-                                            Intent(localContext, VegMain::class.java)
+                                            Intent(localContext, MainActivity::class.java)
                                         )
                                     }
                             )
@@ -244,7 +233,14 @@ class UserProfileActivity : ComponentActivity() {
                                     .offset(x = 181.dp,
                                         y = 3.dp))
                         }
-
+//                        HeadingTextComponent(value = "Name  : ")
+//                        Spacer(modifier = Modifier.height(15.dp))
+//
+//                        HeadingTextComponent(value = "Email Id :d@gmail.com")
+//                        Spacer(modifier = Modifier.height(15.dp))
+//
+//                        HeadingTextComponent(value = "Location :uk")
+//                        Spacer(modifier = Modifier.height(15.dp))
                     }
 
                     if (shouldShowFullImage && hasPhoto) {
@@ -337,3 +333,18 @@ fun TakePhotoButton(
     }
 }
 
+//@Composable
+//fun Greeting2(name: String, modifier: Modifier = Modifier) {
+//    Text(
+//        text = "Hello $name!",
+//        modifier = modifier
+//    )
+//}
+
+//@Preview(showBackground = true)
+//@Composable
+//fun GreetingPreview2() {
+//    JewelleryAppTheme() {
+//        Greeting2("Android")
+//    }
+//}

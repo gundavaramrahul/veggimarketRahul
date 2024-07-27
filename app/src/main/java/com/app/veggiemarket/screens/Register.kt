@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -15,22 +16,34 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.app.veggiemarket.R
-import com.app.veggiemarket.compoofveg.ButtonComponent
-import com.app.veggiemarket.compoofveg.CheckboxComponent
-import com.app.veggiemarket.compoofveg.ClickableLoginTextComponent
-import com.app.veggiemarket.compoofveg.DividerTextComponent
-import com.app.veggiemarket.compoofveg.HeadingTextComponent
-import com.app.veggiemarket.compoofveg.MyTextFieldComponent
-import com.app.veggiemarket.compoofveg.PasswordTextFieldComponent
-import com.app.veggiemarket.data.vegmarketsignup.SUIEventveg
-import com.app.veggiemarket.data.vegmarketsignup.Svm
+import com.app.veggiemarket.components.ButtonComponent
+import com.app.veggiemarket.components.CheckboxComponent
+import com.app.veggiemarket.components.ClickableLoginTextComponent
+import com.app.veggiemarket.components.DividerTextComponent
+import com.app.veggiemarket.components.HeadingTextComponent
+import com.app.veggiemarket.components.MyTextFieldComponent
+import com.app.veggiemarket.components.PasswordTextFieldComponent
+import com.app.veggiemarket.data.signup.SignupUIEvent
+import com.app.veggiemarket.data.signup.SignupViewModel
 import com.app.veggiemarket.navigation.AppRouter
 import com.app.veggiemarket.navigation.Screen
 
 
 @Composable
-fun SignUps(signupViewModel: Svm = viewModel()) {
-
+fun SignUpScreen(signupViewModel: SignupViewModel = viewModel()) {
+//    Box(
+//        modifier = Modifier.fillMaxSize()
+//            .background(color = Color.White),
+//        contentAlignment = Alignment.Center,
+//
+//    ) {
+//        Surface(
+//            modifier = Modifier
+//                .fillMaxSize()
+//                .background(Color.White)
+//                .padding(28.dp)
+//                .align(Alignment.Center)
+//        )
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -65,7 +78,7 @@ fun SignUps(signupViewModel: Svm = viewModel()) {
                     labelValue = stringResource(id = com.app.veggiemarket.R.string.first_name),
                     painterResource(id =com.app.veggiemarket. R.drawable.profile),
                     onTextChanged = {
-                        signupViewModel.onEvent(SUIEventveg.FirstNameChanged(it))
+                        signupViewModel.onEvent(SignupUIEvent.FirstNameChanged(it))
                     },
                     errorStatus = signupViewModel.registrationUIState.value.firstNameError
                 )
@@ -74,7 +87,7 @@ fun SignUps(signupViewModel: Svm = viewModel()) {
                     labelValue = stringResource(id = com.app.veggiemarket.R.string.last_name),
                     painterResource = painterResource(id =com.app.veggiemarket. R.drawable.profile),
                     onTextChanged = {
-                        signupViewModel.onEvent(SUIEventveg.LastNameChanged(it))
+                        signupViewModel.onEvent(SignupUIEvent.LastNameChanged(it))
                     },
                     errorStatus = signupViewModel.registrationUIState.value.lastNameError
                 )
@@ -83,7 +96,7 @@ fun SignUps(signupViewModel: Svm = viewModel()) {
                     labelValue = stringResource(id =com.app.veggiemarket. R.string.email),
                     painterResource = painterResource(id = com.app.veggiemarket.R.drawable.message),
                     onTextChanged = {
-                        signupViewModel.onEvent(SUIEventveg.EmailChanged(it))
+                        signupViewModel.onEvent(SignupUIEvent.EmailChanged(it))
                     },
                     errorStatus = signupViewModel.registrationUIState.value.emailError
                 )
@@ -92,7 +105,7 @@ fun SignUps(signupViewModel: Svm = viewModel()) {
                     labelValue = stringResource(id = com.app.veggiemarket.R.string.password),
                     painterResource = painterResource(id = com.app.veggiemarket.R.drawable.ic_lock),
                     onTextSelected = {
-                        signupViewModel.onEvent(SUIEventveg.PasswordChanged(it))
+                        signupViewModel.onEvent(SignupUIEvent.PasswordChanged(it))
                     },
                     errorStatus = signupViewModel.registrationUIState.value.passwordError
                 )
@@ -116,7 +129,7 @@ fun SignUps(signupViewModel: Svm = viewModel()) {
                             AppRouter.navigateTo(Screen.TermsAndConditionsScreen)
                         },
                         onCheckedChange = {
-                            signupViewModel.onEvent(SUIEventveg.PrivacyPolicyCheckBoxClicked(it))
+                            signupViewModel.onEvent(SignupUIEvent.PrivacyPolicyCheckBoxClicked(it))
                         }
                     )
                 }
@@ -126,7 +139,7 @@ fun SignUps(signupViewModel: Svm = viewModel()) {
                 ButtonComponent(
                     value = stringResource(id =com.app.veggiemarket. R.string.register),
                     onButtonClicked = {
-                        signupViewModel.onEvent(SUIEventveg.RegisterButtonClicked)
+                        signupViewModel.onEvent(SignupUIEvent.RegisterButtonClicked)
                     },
                     isEnabled = signupViewModel.allValidationsPassed.value
                 )
@@ -151,6 +164,6 @@ fun SignUps(signupViewModel: Svm = viewModel()) {
 
 @Preview
 @Composable
-fun DefaultPreviewOfSignUps() {
-    SignUps()
+fun DefaultPreviewOfSignUpScreen() {
+    SignUpScreen()
 }

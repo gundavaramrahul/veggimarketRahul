@@ -11,8 +11,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.app.veggiemarket.R
-import com.app.veggiemarket.compoofveg.HeadingTextComponent
-import com.app.veggiemarket.compoofveg.NormalTextComponent
+import com.app.veggiemarket.components.HeadingTextComponent
+import com.app.veggiemarket.components.NormalTextComponent
 import com.app.veggiemarket.navigation.AppRouter
 import com.app.veggiemarket.navigation.Screen
 import com.app.veggiemarket.navigation.SystemBackButtonHandler
@@ -29,7 +29,7 @@ fun TermsAndConditionsScreen() {
     NormalTextComponent(value = stringResource(id = R.string.terms_and_conditions_headerdes))
 
     SystemBackButtonHandler {
-        AppRouter.navigateTo(Screen.SignUps)
+        AppRouter.navigateTo(Screen.SignUpScreen)
     }
 }
 

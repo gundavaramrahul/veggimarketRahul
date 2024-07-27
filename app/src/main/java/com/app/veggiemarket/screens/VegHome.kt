@@ -40,15 +40,15 @@ import com.app.veggiemarket.DetailsPageActivity
 
 import com.app.veggiemarket.R
 import com.app.veggiemarket.UserProfileActivity
-import com.app.veggiemarket.compoofveg.AppToolbar
-import com.app.veggiemarket.compoofveg.NavigationDrawerBody
-import com.app.veggiemarket.compoofveg.NavigationDrawerHeader
+import com.app.veggiemarket.components.AppToolbar
+import com.app.veggiemarket.components.NavigationDrawerBody
+import com.app.veggiemarket.components.NavigationDrawerHeader
 
-import com.app.veggiemarket.data.vegmarkethome.Hvm
+import com.app.veggiemarket.data.home.HomeViewModel
 import kotlinx.coroutines.launch
 
 @Composable
-fun HomeScreen(homeViewModel: Hvm = viewModel()) {
+fun HomeScreen(homeViewModel: HomeViewModel = viewModel()) {
 
     val scaffoldState = rememberScaffoldState()
     val coroutineScope = rememberCoroutineScope()

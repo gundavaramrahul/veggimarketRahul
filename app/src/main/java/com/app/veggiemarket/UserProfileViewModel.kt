@@ -37,7 +37,7 @@ class UserProfileViewModel : ViewModel() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-
+                    // Handle possible errors
                 }
             })
         }

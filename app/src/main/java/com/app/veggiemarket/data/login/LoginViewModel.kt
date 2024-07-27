@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.app.veggiemarket.data.login.LoginUIEvent
-import com.app.veggiemarket.data.vegmarketrules.Validator
+import com.app.veggiemarket.data.rules.Validator
 import com.app.veggiemarket.navigation.AppRouter
 import com.app.veggiemarket.navigation.Screen
 

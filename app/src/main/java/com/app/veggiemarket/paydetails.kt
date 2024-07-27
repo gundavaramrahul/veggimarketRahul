@@ -36,8 +36,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.app.veggiemarket.compoofveg.HeadingTextComponent
-import com.app.veggiemarket.compoofveg.MyTextFieldComponent
+import com.app.veggiemarket.components.HeadingTextComponent
+import com.app.veggiemarket.components.MyTextFieldComponent
 import com.app.veggiemarket.ui.theme.Primary
 
 class PaymentActivity : ComponentActivity() {
@@ -54,7 +54,77 @@ class PaymentActivity : ComponentActivity() {
                 end = Offset(Float.POSITIVE_INFINITY, 0f)
             )
 
-        }
+            Surface(
+                modifier = Modifier
+                    .background(gradient45)
+                    .fillMaxSize()
+                    .padding(28.dp)
+            ) {
+
+                Column(
+                    modifier = Modifier.fillMaxSize()
+
+                        .background(gradient45),
+
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+
+                    Spacer(modifier = Modifier.height(50.dp))
+
+                    Spacer(modifier = Modifier.height(15.dp))
+                    HeadingTextComponent(value = "Payment Details")
+                    Spacer(modifier = Modifier.height(25.dp))
+
+
+                        Box(
+                            modifier = Modifier.fillMaxSize(),
+                            contentAlignment = Alignment.TopCenter
+                        ) {
+                            // Background Image
+                            Image(
+                                painter = painterResource(id = R.drawable.vlogo),
+                                contentDescription = "",
+                                contentScale = ContentScale.Crop,
+                                modifier = Modifier.fillMaxSize()
+                            )
+
+                            // Content on top of the background image
+                            Column(
+                                modifier = Modifier.padding(16.dp)
+                            ) {
+
+                                Spacer(modifier = Modifier.height(20.dp))
+                                val toy = ""
+                                Button(
+                                    modifier = Modifier
+                                        .wrapContentWidth()
+                                        .heightIn(48.dp),
+                                    onClick = {
+                                        context.startActivity(
+                                            Intent(
+                                                context,
+                                                booksuccess::class.java
+                                            )
+                                        )
+                                    },
+                                    contentPadding = PaddingValues(),
+                                    colors = ButtonDefaults.buttonColors(Color.Transparent),
+                                    shape = RoundedCornerShape(50.dp),
+                                ) {
+                                    //2pay
+                                }
+                                Spacer(modifier = Modifier.height(10.dp))
+                            }
+
+
+
+
+                        }
+
+
+                    }
+                }
+            }
         }
     }
 
