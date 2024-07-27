@@ -120,7 +120,33 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
                     .offset(x = 316.dp,
                         y = 27.dp)
                     .requiredSize(size = 32.dp))
-            //2
+            Text(
+                text = "vegetables Amount Total",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 14.sp),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 27.dp,
+                        y = 681.dp))
+            Text(
+                text = "Delivery charges",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 14.sp),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 27.dp,
+                        y = 625.dp))
+            Text(
+                text = "Sub Total",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 14.sp),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 27.dp,
+                        y = 585.dp))
             val context = LocalContext.current
             Box(
                 modifier = Modifier
