@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.app.veggiemarket'
+    namespace 'com.rahul.veggiemarket'
     compileSdk 34
 
     defaultConfig {
-        applicationId "ccom.app.veggiemarket"
+        applicationId "com.rahul.veggiemarket"
         minSdk 24
         targetSdk 34
         versionCode 1
