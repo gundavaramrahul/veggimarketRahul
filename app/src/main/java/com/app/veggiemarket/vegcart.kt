@@ -100,6 +100,7 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
                     .align(alignment = Alignment.TopStart)
                     .offset(x = 295.dp,
                         y = 621.dp))
+
             Text(
                 text = "vegetables",
                 color = Color.Black,
@@ -162,7 +163,46 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
 
                     .clip(shape = RoundedCornerShape(15.dp))
                     .background(color = Color(0xFF4CAF50)))
-            //3
+            Text(
+                text = "Go To Payment page",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 148.dp,
+                        y = 753.dp))
+            Image(
+                painter = painterResource(id = R.drawable.ff1),
+                contentDescription = "",
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = -10.dp,
+                        y = 249.dp)
+                    .requiredWidth(width = 502.dp)
+                    .requiredHeight(height = 155.dp)
+                    .clip(shape = RoundedCornerShape(15.dp)))
+            Image(
+                painter = painterResource(id = R.drawable.ff22),
+                contentDescription = "",
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = -10.dp,
+                        y = 94.dp)
+                    .requiredWidth(width =500.dp)
+                    .requiredHeight(height = 154.dp)
+                    .clip(shape = RoundedCornerShape(24.dp)))
+            Image(
+                painter = painterResource(id = R.drawable.ff3),
+                contentDescription = "",
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = -10.dp,
+                        y = 404.dp)
+                    .requiredWidth(width =500.dp)
+                    .requiredHeight(height = 154.dp)
+                    .clip(shape = RoundedCornerShape(24.dp)))
 
             Text(
 
@@ -204,6 +244,7 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
                     .offset(x = 27.dp,
                         y = 570.dp)
                     .requiredWidth(width = 399.dp))
+
         }
     }
 }
