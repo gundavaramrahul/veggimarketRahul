@@ -50,44 +50,62 @@ class booksuccess : ComponentActivity() {
                 end = Offset(Float.POSITIVE_INFINITY, 0f)
             )
 
-                Surface(
-                    modifier = Modifier
-                        .background(gradient45)
-                        .fillMaxSize()
-                        .padding(28.dp)
+            Surface(
+                modifier = Modifier
+                    .background(gradient45)
+                    .fillMaxSize()
+                    .padding(28.dp)
 
-                        .background(Color(0x4B4CAF50))
-                        .padding(28.dp)
-                        //.align(Alignment.Center)
-                ) {
+                    .background(Color(0x4B4CAF50))
+                    .padding(28.dp)
+                //.align(Alignment.Center)
+            ) {
 
 
-                    Column(modifier = Modifier
-                        .fillMaxSize()
-                        .background(gradient45),
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally) {
-                        HeadingTextComponent(value = "Order Placed Successfully")
-                        Spacer(modifier = Modifier.height(50.dp))
-                        Image(painter = painterResource(id = R.drawable.so),contentDescription = null)
-                        Spacer(modifier = Modifier.height(80.dp))
-                        val veg = ""
-                        Button(
+                Column(modifier = Modifier
+                    .fillMaxSize()
+                    .background(gradient45),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally) {
+                    HeadingTextComponent(value = "Order Placed Successfully")
+                    Spacer(modifier = Modifier.height(50.dp))
+                    Image(painter = painterResource(id = R.drawable.so),contentDescription = null)
+                    Spacer(modifier = Modifier.height(80.dp))
+                    val veg = ""
+                    Button(
+                        modifier = Modifier
+                            .wrapContentWidth()
+                            .heightIn(48.dp),
+                        onClick = {
+                            context.startActivity(Intent(context, MainActivity::class.java)
+                                .putExtra("veg", veg))
+                        },
+                        contentPadding = PaddingValues(),
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        shape = RoundedCornerShape(50.dp),
+                    ) {
+                        Box(
                             modifier = Modifier
-                                .wrapContentWidth()
-                                .heightIn(48.dp),
-                            onClick = {
-                                context.startActivity(Intent(context, MainActivity::class.java)
-                                    .putExtra("veg", veg))
-                            },
-                            contentPadding = PaddingValues(),
-                            colors = ButtonDefaults.buttonColors(Color.Transparent),
-                            shape = RoundedCornerShape(50.dp),
+                                .fillMaxWidth()
+                                .heightIn(48.dp)
+                                .background(
+                                    brush = Brush.horizontalGradient(listOf(Primary, Primary)),
+                                    shape = RoundedCornerShape(20.dp)
+                                ),
+                            contentAlignment = Alignment.Center
                         ) {
-                           //order4
+                            Text(
+                                text = "Back to Home",
+                                fontSize = 18.sp,
+                                color = Color.Black,
+                                fontWeight = FontWeight.Bold
+                            )
+
                         }
+
                     }
                 }
+            }
         }
     }
 }
