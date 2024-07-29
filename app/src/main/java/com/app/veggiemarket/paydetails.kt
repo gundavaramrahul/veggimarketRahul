@@ -76,57 +76,95 @@ class PaymentActivity : ComponentActivity() {
                     Spacer(modifier = Modifier.height(25.dp))
 
 
-                        Box(
-                            modifier = Modifier.fillMaxSize(),
-                            contentAlignment = Alignment.TopCenter
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.TopCenter
+                    ) {
+
+                        Image(
+                            painter = painterResource(id = R.drawable.vlogo),
+                            contentDescription = "",
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier.fillMaxSize()
+                        )
+
+                        // Content on top of the background image
+                        Column(
+                            modifier = Modifier.padding(16.dp)
                         ) {
-                            // Background Image
-                            Image(
-                                painter = painterResource(id = R.drawable.vlogo),
-                                contentDescription = "",
-                                contentScale = ContentScale.Crop,
-                                modifier = Modifier.fillMaxSize()
+                            MyTextFieldComponent(
+                                labelValue = "Card information",
+                                painterResource = painterResource(id = R.drawable.card_png1),
+                                onTextChanged = {}
                             )
 
-                            // Content on top of the background image
-                            Column(
-                                modifier = Modifier.padding(16.dp)
-                            ) {
+                            MyTextFieldComponent(
+                                labelValue = "Expiry date",
+                                painterResource = painterResource(id = R.drawable.card_png1),
+                                onTextChanged = {}
+                            )
 
-                                Spacer(modifier = Modifier.height(20.dp))
-                                val toy = ""
-                                Button(
-                                    modifier = Modifier
-                                        .wrapContentWidth()
-                                        .heightIn(48.dp),
-                                    onClick = {
-                                        context.startActivity(
-                                            Intent(
-                                                context,
-                                                booksuccess::class.java
-                                            )
+                            MyTextFieldComponent(
+                                labelValue = "Security Code",
+                                painterResource = painterResource(id = R.drawable.card_png1),
+                                onTextChanged = {}
+                            )
+
+                            MyTextFieldComponent(
+                                labelValue = "Name on card",
+                                painterResource = painterResource(id = R.drawable.card_png1),
+                                onTextChanged = {}
+                            )
+                            Spacer(modifier = Modifier.height(20.dp))
+                            val toy = ""
+                            Button(
+                                modifier = Modifier
+                                    .wrapContentWidth()
+                                    .heightIn(48.dp),
+                                onClick = {
+                                    context.startActivity(
+                                        Intent(
+                                            context,
+                                            booksuccess::class.java
                                         )
-                                    },
-                                    contentPadding = PaddingValues(),
-                                    colors = ButtonDefaults.buttonColors(Color.Transparent),
-                                    shape = RoundedCornerShape(50.dp),
+                                    )
+                                },
+                                contentPadding = PaddingValues(),
+                                colors = ButtonDefaults.buttonColors(Color.Transparent),
+                                shape = RoundedCornerShape(50.dp),
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .heightIn(48.dp)
+                                        .background(
+                                            brush = Brush.horizontalGradient(listOf(Primary, Primary)),
+                                            shape = RoundedCornerShape(20.dp)
+                                        ),
+                                    contentAlignment = Alignment.Center
                                 ) {
-                                    //2pay
+                                    Text(
+                                        text = "Proceed",
+                                        fontSize = 18.sp,
+                                        color = Color.Black,
+                                        fontWeight = FontWeight.Bold
+                                    )
                                 }
-                                Spacer(modifier = Modifier.height(10.dp))
                             }
-
-
-
-
+                            Spacer(modifier = Modifier.height(10.dp))
                         }
 
 
+
+
                     }
+
+
                 }
             }
         }
     }
+}
 
 @Preview
 @Composable
