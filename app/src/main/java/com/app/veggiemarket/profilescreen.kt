@@ -197,14 +197,28 @@ class UserProfileActivity : ComponentActivity() {
                             }
 
 
-                           //profile3
+                            Spacer(modifier = Modifier.height(8.dp))
+
+                            TextField(
+                                value = email,
+                                onValueChange = { email = it },
+                                label = { Text("Email") },
+                                modifier = Modifier.fillMaxWidth()
+                            )
+
+                            Spacer(modifier = Modifier.height(8.dp))
+
+                            TextField(
+                                value = password,
+                                onValueChange = { password = it },
+                                label = { Text("Password") },
+                                modifier = Modifier.fillMaxWidth(),
+                                visualTransformation = PasswordVisualTransformation()
+                            )
 
                             Spacer(modifier = Modifier.height(16.dp))
 
-//                            Button(onClick = { /* Handle submit */ },
-//                                modifier = Modifier.fillMaxWidth()) {
-//                                Text("Submit")
-//                            }
+
                             val localContext = LocalContext.current
                             Box(
                                 modifier = Modifier
@@ -233,14 +247,7 @@ class UserProfileActivity : ComponentActivity() {
                                     .offset(x = 181.dp,
                                         y = 3.dp))
                         }
-//                        HeadingTextComponent(value = "Name  : ")
-//                        Spacer(modifier = Modifier.height(15.dp))
-//
-//                        HeadingTextComponent(value = "Email Id :d@gmail.com")
-//                        Spacer(modifier = Modifier.height(15.dp))
-//
-//                        HeadingTextComponent(value = "Location :uk")
-//                        Spacer(modifier = Modifier.height(15.dp))
+
                     }
 
                     if (shouldShowFullImage && hasPhoto) {
@@ -333,18 +340,3 @@ fun TakePhotoButton(
     }
 }
 
-//@Composable
-//fun Greeting2(name: String, modifier: Modifier = Modifier) {
-//    Text(
-//        text = "Hello $name!",
-//        modifier = modifier
-//    )
-//}
-
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview2() {
-//    JewelleryAppTheme() {
-//        Greeting2("Android")
-//    }
-//}
