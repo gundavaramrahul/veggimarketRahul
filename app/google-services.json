@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "242924243591",
-    "project_id": "veggiemarket-1c6fc",
-    "storage_bucket": "veggiemarket-1c6fc.appspot.com"
+    "project_number": "150425348515",
+    "project_id": "veggiemarket-d31cb",
+    "storage_bucket": "veggiemarket-d31cb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:242924243591:android:852bd928ce186db26dc622",
+        "mobilesdk_app_id": "1:150425348515:android:f8cde09d8667f009369216",
         "android_client_info": {
-          "package_name": "ccom.app.veggiemarket"
+          "package_name": "com.rahul.veggiemarket"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAt6rdinPKoWQdy_PO-qSmbuPQ8wlTAJ-w"
+          "current_key": "AIzaSyCutz7JDqts_D9-cEo4UKZ8xjDqZ3Mn358"
         }
       ],
       "services": {
